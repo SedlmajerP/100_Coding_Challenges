@@ -6,10 +6,10 @@
 # Then, the output should be:
 # again and hello makes perfect practice world
 
-# sentence = input().split(" ")
-# sorted_sentence = sorted(set(sentence))
-# for word in sorted_sentence:
-#     print(word, end=" ")
+sentence = input().split(" ")
+sorted_sentence = sorted(set(sentence))
+for word in sorted_sentence:
+    print(word, end=" ")
 
 
 # Question 11
@@ -29,3 +29,32 @@ for n in b_number:
         lst.append(n)
 
 print(",".join(lst))
+
+# Question 12
+# Write a program, which will find all such numbers between 1000 and 3000 (both included)
+# such that each digit of the number is an even number.The numbers obtained should be printed
+# in a comma-separated sequence on a single line.
+
+even_digits = []
+
+for i in range(1000, 3001):
+    even = 1
+    for j in str(i):
+        if int(j) % 2 != 0:
+            even = 0
+    if even == 1:
+        even_digits.append(str(i))
+
+print(",".join(even_digits))
+
+# Question 13
+# Write a program that accepts a sentence and calculate the number of letters and digits.
+
+sentence1 = "hello world! 123"
+letters, nums = 0, 0
+for el in sentence1:
+    if el.isdigit():
+        nums += 1
+    elif el.isalpha():
+        letters += 1
+print(f"LETTERS:{letters}\nDIGITS:{nums}")
