@@ -36,3 +36,19 @@ def conc(w1, w2): return w1+w2
 
 
 print(conc("hello", " world"))
+
+
+# Question 30
+# Define a function that can accept two strings as input and print the string with maximum length in console.
+# If two strings have the same length, then the function should print all strings line by line.
+
+def compare(str1, str2):
+    if len(str1) < len(str2):
+        return str2
+    elif len(str1) == len(str2):
+        return(f"{str1}\n{str2}")
+    else:
+        return(str1)
+
+
+print(compare("hello", "world"))
