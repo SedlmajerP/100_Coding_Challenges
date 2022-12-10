@@ -17,7 +17,7 @@ class American():
 
 
 obj = American()
-print("Question 45:")
+print("\nQuestion 45:")
 obj.printNationality()
 
 
@@ -25,4 +25,16 @@ obj.printNationality()
 # Define a class named American and its subclass NewYorker.ˇ
 
 class American2():
+    pass
+
+
 class NewYorker(American2):
+
+    def printCity(self):
+        print("City: New York")
+
+
+print("\nQuestion 46:")
+obj2 = NewYorker()
+obj2.printCity()
+NewYorker().printCity()
